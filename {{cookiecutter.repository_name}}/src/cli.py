@@ -4,7 +4,7 @@ import argparse
 def parse_args() -> argparse.Namespace:
     """Parses command line arguments using argparse.
 
-    :return: Arguments namespace
+    :return: Arguments namespace.
     """
     parser = argparse.ArgumentParser(
         prog="{{ cookiecutter.repository_name.replace('-', '_') }}",
