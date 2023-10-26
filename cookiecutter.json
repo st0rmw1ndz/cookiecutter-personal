@@ -1,0 +1,22 @@
+{
+    "project_name": "cookiecutter-minimal",
+    "project_description": "A minimal project structure for use with Cookiecutter",
+    "cli": [
+        true,
+        false
+    ],
+    "version": "0.1.0",
+    "mypy_strict": [
+        true,
+        false
+    ],
+    "codeberg_username": "frosty",
+    "full_name": "{{ cookiecutter.codeberg_username }}",
+    "email": "inthishouseofcards@gmail.com",
+    "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "repository_url": "https://codeberg.org/{{ cookiecutter.codeberg_username }}/{{ cookiecutter.repository_name }}",
+    "license": [
+        "MIT license",
+        "WTFPL"
+    ]
+}
