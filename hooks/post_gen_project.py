@@ -9,13 +9,9 @@ def remove(path: str) -> None:
         shutil.rmtree(path)
 
 
-use_cli: bool = "{{cookiecutter.cli}}" == "True"
-mypy_strict: bool = "{{cookiecutter.mypy_strict}}" == "True"
+use_cli: bool = "{{ cookiecutter.cli }}" == "True"
 
 
 if not use_cli:
-    remove(os.path.join("src", "__main__.py"))
-    remove(os.path.join("src", "cli.py"))
-
-if not mypy_strict:
-    remove("mypy.ini")
+    remove(os.path.join("{{ cookiecutter.__project_slug }}", "__main__.py"))
+    remove(os.path.join("{{ cookiecutter.__project_slug }}", "cli.py"))
