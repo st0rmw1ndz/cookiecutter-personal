@@ -2,14 +2,13 @@
 
 A minimal project structure for use with [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
 
-This is more tailored to me and how I structure my code. So, if you're interested in this, you may want to fork it with your own changes.
-
 ## Features
 
 - Python 3.8+
-- Multiple licenses: [MIT license](https://opensource.org/license/mit/) and [WTFPL](http://www.wtfpl.net/)
-- [mypy](https://mypy-lang.org/): Strict configurations
 - Command-line interface using [argparse](https://docs.python.org/3/library/argparse.html)
+- Multiple licenses: [MIT license](https://opensource.org/license/mit/) and [WTFPL](http://www.wtfpl.net/)
+- Packaging with [Poetry](https://python-poetry.org/)
+- [mypy](https://mypy-lang.org/): Strict configurations
 
 ## Quick Usage
 
@@ -24,3 +23,15 @@ Generate a new project:
 ```
 ~ cookiecutter https://codeberg.org/frosty/cookiecutter-minimal.git
 ```
+
+## Don't Like it?
+
+There's plenty of cookiecutters out there, and you can even make your own!
+
+Other cookiecutters:
+
+- [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
+- [ardydedase/cookiecutter-pypackage](https://github.com/ardydedase/cookiecutter-pypackage)
+- [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage)
+
+See *[Create a Cookiecutter From Scratch](https://cookiecutter.readthedocs.io/en/stable/tutorials/tutorial2.html)* for more information.
