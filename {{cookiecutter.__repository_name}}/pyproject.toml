@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "{{ cookiecutter.__project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
+license = "{%- if cookiecutter.license == 'MIT license' %}MIT{%- elif cookiecutter.license == 'WTFPL' %}WTFPL{%- endif %}"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+mypy = "^1.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "{{ cookiecutter.python_version }}"
+strict = true
+allow_untyped_calls = true
+warn_unreachable = true
+implicit_reexport = true
+show_error_codes = true
+show_column_numbers = true
