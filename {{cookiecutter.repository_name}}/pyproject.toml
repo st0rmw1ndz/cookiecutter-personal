@@ -1,0 +1,35 @@
+[project]
+name = "{{ cookiecutter.__project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_description }}"
+authors = [{ name = "{{ cookiecutter.__author }}", email = "{{ cookiecutter.__email }}" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["click>=8.1.7"]
+
+{%- if cookiecutter.cli == true %}
+[project.scripts]
+{{ cookiecutter.__project_slug }} = "{{ cookiecutter.__project_slug }}.__main__:cli"
+{%- endif %}
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    "F",   # Pyflakes
+    "E",   # pycodestyle Error
+    "W",   # pycodestyle Warning
+    "I",   # isort
+    "N",   # pep8-naming
+    "Q",   # flake8-quotes
+    "TCH", # flake8-type-checking
+    "PTH", # flake8-use-pathlib
+]
+fixable = ["ALL"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"

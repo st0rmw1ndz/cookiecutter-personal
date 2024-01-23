@@ -1,20 +1,14 @@
 {
-    "project_name": "cookiecutter-minimal",
-    "project_description": "A minimal project structure for use with Cookiecutter",
+    "project_name": "",
+    "project_description": "",
     "version": "0.1.0",
     "cli": [
         true,
         false
     ],
-    "license": [
-        "MIT license",
-        "WTFPL"
-    ],
-    "codeberg_username": "frosty",
-    "full_name": "{{ cookiecutter.codeberg_username }}",
-    "email": "inthishouseofcards@gmail.com",
-    "python_version": "3.11",
-    "__repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "__project_slug": "{{ cookiecutter.__repository_name.replace('-', '_') }}",
-    "__repository_url": "https://codeberg.org/{{ cookiecutter.codeberg_username }}/{{ cookiecutter.__repository_name }}"
+    "__author": "frosty",
+    "__email": "inthishouseofcards@gmail.com",
+    "repository_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "__project_slug": "{{ cookiecutter.repository_name.replace('-', '_') }}",
+    "__repository_url": "https://github.com/st0rmw1ndz/{{ cookiecutter.repository_name }}"
 }
